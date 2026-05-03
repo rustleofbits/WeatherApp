@@ -27,16 +27,18 @@ struct ContentView: View {
                         RoundedRectangle(cornerRadius: 20).stroke(.gray)
                     }
                     .autocorrectionDisabled()
-                    Button("Find") {
+                    Button {
                         Task {
                             await viewModel.onFind()
                         }
+                    } label: {
+                        Text("Find")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(.black)
+                            .cornerRadius(20)
+                            .foregroundStyle(.white)
                     }
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(.black)
-                    .cornerRadius(20)
-                    .foregroundStyle(.white)
                 }
                 Spacer()
             }
