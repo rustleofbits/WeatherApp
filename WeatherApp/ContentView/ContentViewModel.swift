@@ -22,6 +22,7 @@ class ContentViewModel: ObservableObject {
     func onFind() async {
         isLoading = true
         showError = false
+        response = nil
         guard var url = URL(string: urlString) else { return }
         url.append(
             queryItems: [
