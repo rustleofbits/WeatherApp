@@ -18,5 +18,5 @@ struct Response: Hashable {
     let wind: String
     let humidity: String
     let pressure: String
-    let weatherImg: String?
+    let iconId: String?
 }

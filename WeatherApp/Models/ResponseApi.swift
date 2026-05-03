@@ -33,7 +33,7 @@ struct ResponseApi: Decodable {
         let speed: Float
     }
     
-    func toModel(img: String?) -> Response {
+    func toModel() -> Response {
         Response(
             cityName: name,
             temperature: String(Int(main.temp)),
@@ -45,7 +45,7 @@ struct ResponseApi: Decodable {
             wind: String(wind.speed),
             humidity: String(main.humidity),
             pressure: String(main.pressure),
-            weatherImg: img
+            iconId: weather.first?.icon
         )
     }
     

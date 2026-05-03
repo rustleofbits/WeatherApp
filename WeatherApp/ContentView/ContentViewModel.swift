@@ -34,7 +34,7 @@ class ContentViewModel: ObservableObject {
             let (data, _) = try await URLSession.shared.data(from: url)
             let decoded = try JSONDecoder().decode(ResponseApi.self, from: data)
             
-            response = decoded.toModel(img: nil)
+            response = decoded.toModel()
             isLoading = false
         } catch {
             isLoading = false
@@ -43,4 +43,4 @@ class ContentViewModel: ObservableObject {
         }
     }
 }
-//https://openweathermap.org/payload/api/media/file/10d@2x.png
+

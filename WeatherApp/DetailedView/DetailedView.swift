@@ -18,7 +18,7 @@ struct DetailedView: View {
                     maxTemperature: response.maxTemperature,
                     weekday: response.weekday
                 )
-                IconView(title: response.weatherTitle, description: response.weatherDescription)
+                IconView(title: response.weatherTitle, description: response.weatherDescription, iconId: response.iconId)
             }
             Spacer()
             FooterDetailedView(
@@ -47,7 +47,7 @@ struct DetailedView: View {
                 wind: "30",
                 humidity: "40",
                 pressure: "50",
-                weatherImg: nil
+                iconId: "10d"
             )
         )
     }
