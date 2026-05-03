@@ -10,7 +10,7 @@ import Foundation
 
 class ContentViewModel: ObservableObject {
     private let urlString = "https://api.openweathermap.org/data/2.5/weather"
-    private let apiKey = "7978d7a381fe1bb407b2a344031259bf"
+    private let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String ?? ""
     
     @Published var cityName: String = ""
     @Published var isLoading = false
