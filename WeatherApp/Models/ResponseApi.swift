@@ -11,7 +11,7 @@ struct ResponseApi: Decodable {
     let name: String
     let main: Main
     let weather: [Weather]
-    let dt: Double
+    let dt: TimeInterval
     let wind: Wind
     
     struct Main: Decodable {
@@ -30,7 +30,7 @@ struct ResponseApi: Decodable {
     }
     
     struct Wind: Decodable {
-        let speed: Float
+        let speed: Double
     }
     
     func toModel() -> Response {
