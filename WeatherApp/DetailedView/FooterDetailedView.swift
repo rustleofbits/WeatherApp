@@ -17,19 +17,19 @@ struct FooterDetailedView: View {
             VStack {
                 Image(systemName: "wind")
                 Text("Wind")
-                Text(wind) + Text("m/s")
+                Text(wind) + Text(" m/s")
             }
             Spacer()
             VStack {
                 Image(systemName: "humidity")
                 Text("Humidity")
-                Text(humidity) + Text("%")
+                Text(humidity) + Text(" %")
             }
             Spacer()
             VStack {
                 Image(systemName: "thermometer.tirepressure")
                 Text("Pressure")
-                Text(pressure) + Text("hPa")
+                Text(pressure) + Text(" hPa")
             }
         }
         .frame(maxWidth: .infinity)

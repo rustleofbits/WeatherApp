@@ -42,7 +42,7 @@ struct ResponseApi: Decodable {
             weekday: getWeekday(dt: dt),
             weatherTitle: weather.first?.main,
             weatherDescription: weather.first?.description,
-            wind: String(wind.speed),
+            wind: String(format: "%.1f", wind.speed),
             humidity: String(main.humidity),
             pressure: String(main.pressure),
             iconId: weather.first?.icon
